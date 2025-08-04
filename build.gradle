@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
+
+// Configure unconventional project layout: all sources and tests reside in 'src'
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+            exclude '**/*Test.java'
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src']
+            include '**/*Test.java'
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+    // Extra logging to make test activity visible in the IDE
+    testLogging {
+        events "passed", "failed", "skipped", "standardOut", "standardError"
+        showExceptions true
+        showStackTraces true
+    }
+}
