@@ -11,8 +11,8 @@ class MainTest {
     }
 
     @Test
-    void testAdditionFails() {
+    void testAdditionAgain() {
         Main main = new Main();
-        assertEquals(4, main.add(2, 3), "2 + 3 should equal 4 for failure example");
+        assertEquals(5, main.add(2, 3), "2 + 3 should equal 5 (second check)");
     }
 }

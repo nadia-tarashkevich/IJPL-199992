@@ -1,3 +1,4 @@
+
 # AutoTests: Reproducing IDE Auto Test Focus Stealing
 
 This tiny Gradle Java project is designed to reproduce disruptive behavior when IDEs (CLion, RustRover, PyCharm, IntelliJ IDEA) run tests automatically on code changes.
